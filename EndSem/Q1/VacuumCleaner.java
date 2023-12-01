@@ -15,30 +15,14 @@ class VacuumCleaner extends Cleaner implements Serializable {
 
     @Override
     public void clean() {
-        System.out.printf("Motor is cleaning");
+        System.out.print("Motor is cleaning");
     }
 
-    class Motor implements Rotator, Serializable {
+    static class Motor implements Rotator, Serializable {
 
         @Override
         public void rotate() {
-            System.out.printf("Motor is rotating");
+            System.out.print("Motor is rotating");
         }
-    }
-
-    public VacuumCleaner(Motor motor) {
-        this.motor = motor;
-    }
-
-    public String getModelID() {
-        return modelID;
-    }
-
-    public void setModelID(String modelID) {
-        this.modelID = modelID;
-    }
-
-    public Motor getMotor() {
-        return motor;
     }
 }

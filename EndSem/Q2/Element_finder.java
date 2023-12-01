@@ -3,7 +3,7 @@ package Q2;
 import java.util.ArrayList;
 
 class Element_finder {
-    private ArrayList<Integer> arrayList;
+    private final ArrayList<Integer> arrayList;
 
     public Element_finder(ArrayList<Integer> arrayList) {
         this.arrayList = arrayList;
