@@ -11,7 +11,7 @@ public class Element_finderTest {
 
     @Test
     public void Test1() {
-        ArrayList<Integer> test_list = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 1323, 4433));
+        ArrayList<Integer> test_list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 1323, 4433));
         Element_finder ef = new Element_finder(test_list);
         int element = 10;
 
@@ -21,7 +21,7 @@ public class Element_finderTest {
 
     @Test
     public void Test2() {
-        ArrayList<Integer> test_list = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 1323, 444));
+        ArrayList<Integer> test_list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 1323, 444));
         Element_finder ef = new Element_finder(test_list);
         int element = 444;
 
@@ -31,7 +31,7 @@ public class Element_finderTest {
 
     @Test
     public void Test3() {
-        ArrayList<Integer> test_list = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 1323, 4433));
+        ArrayList<Integer> test_list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 1323, 4433));
         Element_finder ef = new Element_finder(test_list);
         int element = 5;
 
