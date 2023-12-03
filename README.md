@@ -18,6 +18,7 @@
     <li> Serialization & Deserialization </li>
     <li> JUnit </li>
     <li> Multithreading </li>
+    <li> ThreadPool </li>
     <li> Design Patterns </li>
 </ui>
 
