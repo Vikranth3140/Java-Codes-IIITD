@@ -4,9 +4,9 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        VacuumCleaner vc1 = new VacuumCleaner("First VC");
 
         // serialization
+        VacuumCleaner vc1 = new VacuumCleaner("First VC");
         ObjectOutputStream out = null;
 
         try {
@@ -20,18 +20,18 @@ public class Main {
         }
 
         // deserialization
-        ObjectInputStream in = null;
         Cleaner c2 = null;
+        ObjectInputStream in = null;
 
-        {
-            try {
-                in = new ObjectInputStream(new FileInputStream("cleaner.txt"));
-                c2 = (VacuumCleaner) in.readObject();
-            } catch (IOException | ClassNotFoundException e) {
-                throw new RuntimeException(e);
-            } finally {
-                in.close();
-            }
+        try {
+            in = new ObjectInputStream(new FileInputStream("cleaner.txt"));
+            c2 = (VacuumCleaner) in.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } finally {
+            assert in != null;
+            in.close();
         }
+        c2.clean();
     }
 }

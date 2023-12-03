@@ -6,11 +6,12 @@ import org.junit.runner.Result;
 
 public class Main {
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(Element_finderTest.class);
+        Result r = JUnitCore.runClasses(Element_finderTest.class);
 
-        for (Failure failure: result.getFailures()){
+        for (Failure failure: r.getFailures()) {
             System.out.println(failure.toString());
         }
-        System.out.println(result.wasSuccessful());
+
+        System.out.println(r.wasSuccessful());
     }
 }
